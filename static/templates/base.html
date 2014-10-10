@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Final</title>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <meta name = "format-detection" content = "telephone=no" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/static/css/bootstrap.css" >
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.css">
+    <!--JS-->
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/jquery-migrate-1.2.1.js"></script>
+    <script src="/static/js/superfish.js"></script>
+    <script src="/static/js/jquery.easing.1.3.js"></script>
+    <script src="/static/js/jquery.mobilemenu.js"></script>
+    <script src="/static/js/jquery.ui.totop.js"></script>
+    <script src="/static/js/jquery.equalheights.js"></script>
+    <script src="/static/js/jquery.carouFredSel-6.1.0-packed.js"></script>
+    <script src="/static/js/jquery.mousewheel.min.js"></script>
+    <script src="/static/js/jquery.touchSwipe.min.js"></script>
+    <script src="/static/js/custom.js"></script>
+    <script>
+    $(window).load(function() {
+        $(function() {
+                $('#foo2').carouFredSel({
+    				auto: false,
+    				responsive: true,
+    				width: '100%',
+    				scroll: 1,
+                    prev: '#prev2',
+    				next: '#next2',
+    				items: {
+    					height: 'auto',
+    					width:270,
+    					visible: {
+    						min: 1,
+    						max: 1
+    					}
+    				},
+    				mousewheel: true,
+    				swipe: {
+    					onMouse: true,
+    					onTouch: true
+    				}
+    			});
+    		});	 				
+        });
+    </script>
+    <!--[if lt IE 9]>
+        <div style='text-align:center'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>  
+        <script src="/static/js/html5shiv.js"></script> 
+        <script src="/static/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--header-->
+<header>
+    <div class="container">
+        <section>
+            <h1 class="navbar-brand navbar-brand_">
+                <a href="index.html">
+                    <!--<img src="/static/img/logo.png" alt="">-->
+                </a>
+            </h1>
+                <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
+                    <ul class="nav sf-menu clearfix">
+                        <li><a href="/">početna</a></li>
+                        <!--<li class="sub-menu"><a href="/aboutus">o nama<span></span></a>-->
+                            <!--<ul class="submenu">-->
+                                <!--<li><a href="/galery">galerija</a></li>-->
+                                <!--<li><a href="/references">reference</a></li>-->
+                                <!--<li class="triangle"></li>-->
+                            <!--</ul>-->
+                        <!--</li>-->
+                        <!--<li><a href="/services">usluge</a></li>-->
+                        <!--<li><a href="/news">novosti</a></li>-->
+                        <li class="sub-menu"><a href="#">o nama<span></span></a>
+                            <ul class="submenu">
+                                <li><a href="#">galerija</a></li>
+                                <li><a href="#s">reference</a></li>
+                                <li class="triangle"></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">usluge</a></li>
+                        <li><a href="#">novosti</a></li>
+                        <li><a href="/contact">kontakt</a></li>
+                    </ul>
+                </nav>
+        </section>
+    </div>
+</header>
+
+{% block main_content %}
+<div class="global">
+    <section class="bg_pic">
+        <div class="container">
+            <div class="row">
+                <article class="col-lg-12 col-md-12 col-sm-12">
+                    <figure><img src="/static/img/picture1.jpg" alt=""></figure>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!--content-->
+    {% block welcome %} 
+    {% endblock %}
+     <div class="container">
+        <div class="row">
+            <article class="col-lg-12 col-md-12 col-sm-12 bannersBox">
+                <div class="box1">
+                    <figure><img src="/static/img/page1_pic1.jpg" alt=""></figure>
+                    <div class="caption maxheight">
+                       <h2 class="maxheight2">Savjeti & Preporuke</h2>
+                       <a href=""></a>
+                   </div>
+                </div>
+                <div class="box2">
+                    <div class="caption maxheight">
+                        <a href=""></a>
+                        <h2 class="">Galerija</h2>
+                    </div>
+                    <figure><img src="/static/img/page1_pic2.jpg" alt=""></figure>
+                </div>
+                <div class="box1">
+                    <figure><img src="/static/img/page1_pic3.jpg" alt=""></figure>
+                    <div class="caption maxheight">
+                       <h2 class="maxheight2">Oprema</h2>
+                       <a href=""></a>
+                   </div>
+                </div>
+            </article>
+            <article class="col-lg-12 col-md-12 col-sm-12 bannersBox2">
+                <div class="row">
+                    {% block latest_project %}
+                    {% endblock %}
+                    <article class="col-lg-4 col-md-4 col-sm-6 box2">
+                        <div>
+                            <figure><img src="/static/img/page1_pic5.png" alt=""></figure>
+                            <div>
+                                <a href="#" class="btn-default btn1">više</a>
+                            </div>
+                        </div>
+                    </article>
+                    {% block topthree %}
+                    {% endblock %}
+                    
+                </div>
+            </article>
+        </div>
+     </div>
+</div>
+{% endblock %}
+
+<!--footer-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <article class="col-lg-4 col-md-4 col-sm-4">
+                <div class="maxheight3">
+                    <ul class="follow_icon">
+                        <li><a href="#"><img src="/static/img/follow_icon1.png" alt=""></a></li>
+                        <li><a href="#"><img src="/static/img/follow_icon2.png" alt=""></a></li>
+                        <li><a href="#"><img src="/static/img/follow_icon3.png" alt=""></a></li>
+                        <li><a href="#"><img src="/static/img/follow_icon4.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </article>
+            <article class="col-lg-4 col-md-4 col-sm-4 homeBox">
+                <div class="maxheight3">
+                    <figure><img src="/static/img/home_icon.png" alt=""></figure>
+                    <div class="extra-wrap">
+                        <p>Put Svetog Izidora 65, 21000 Split</p>
+                    </div>
+                </div>
+            </article>
+            <article class="col-lg-4 col-md-4 col-sm-4 privBox">
+                <div class="maxheight3">
+                    <p>Final &copy; <span id="copyright-year"></span> &bull; <a href="index-5.html">Privacy Policy</a></p>
+                </div>
+            </article>
+            <!-- {%FOOTER_LINK} -->
+        </div>
+    </div>
+</footer>
+<script src="/static/js/bootstrap.min.js"></script>
+<!-- <script src="js/tm-scripts.js"></script> -->
+</body>
+</html>
