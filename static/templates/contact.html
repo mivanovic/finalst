@@ -30,26 +30,26 @@
                 <article class="col-lg-8 col-md-8 col-sm-8 contactBox">
                     <div class="maxheight">
                         <h3>Kontakt Forma</h3>
-                        <form id="contact-form">
+                        <form id="contact-form" method="post" action="/contact/send/">{% csrf_token %}  <form method="post" action="/email/send/">{% csrf_token %}
                             <div class="success-message">Contact form submitted.</div>
                             <div class="holder">
                                 <div class="form-div-1 clearfix">
                                     <label class="name">
-                                        <input type="text" placeholder="Ime*" data-constraints="@Required @JustLetters" />
+                                        <input type="text" placeholder="Ime*" data-constraints="@Required @JustLetters" name="name" class="inputtext" maxlength="30"/>
                                         <span class="empty-message">*Polje je obavezno.</span>
                                         <span class="error-message">*This is not a valid name.</span>
                                     </label>
                                 </div>
                                 <div class="form-div-2 clearfix">
                                     <label class="email">
-                                        <input type="text" placeholder="E-mail*" data-constraints="@Required @Email" />
+                                        <input type="text" placeholder="E-mail*" data-constraints="@Required @Email" name="email" class="inputtext" maxlength="50"/>
                                         <span class="empty-message">*This field is required.</span>
                                         <span class="error-message">*This is not a valid email.</span>
                                     </label>
                                 </div>
                                 <div class="form-div-3 clearfix">
                                     <label class="phone notRequired">
-                                        <input type="text" placeholder="Telefon" data-constraints="@JustNumbers"/>
+                                        <input type="text" placeholder="Telefon" data-constraints="@JustNumbers" name="phone"/>
                                         <span class="empty-message">*Polje je obavezno</span>
                                         <span class="error-message">*This is not a valid phone.</span>
                                     </label>
@@ -57,15 +57,15 @@
                             </div>
                             <div class="form-div-4 clearfix">
                                 <label class="message">
-                                    <textarea placeholder="Komentar*" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+                                    <textarea name="message" placeholder="Komentar*" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
                                     <span class="empty-message">*Polje je obavezno</span>
                                     <span class="error-message">*The message is too short.</span>
                                 </label>
                             </div>
                             <div class="btns">
-                                <a href="#" data-type="submit" class="btn-default btn1">Posalji</a>
+                                <input class="submitform btn-default btn1" type="submit" name="submitform" value="Posalji" />
                                 <p>*Obavezna polja</p>
-                            </div>  
+                            </div>
                         </form>
                     </div>
                 </article>

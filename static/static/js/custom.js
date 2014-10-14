@@ -1,3 +1,3 @@
 $(document).ready(function(){
-    alert('Stranica je u izradi');
+//    alert('Stranica je u izradi');
   });
