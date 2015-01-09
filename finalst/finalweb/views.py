@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response, RequestContext
-from finalweb.models import Quote, Project, Service
+from finalweb.models import Quote, Project, Reference
 
 from django.views.generic.base import TemplateView
 from django.http import HttpResponseRedirect
@@ -10,27 +10,35 @@ from finalst import settings
 
 # Create your views here.
 
+
 def index(request):
-	return render_to_response('index.html', {'quotes': Quote.objects.all(), 'latest_project': Project.objects.latest('id'),
-								'topthree': Project.objects.order_by('-complexity')[:3]})
+    return render_to_response('index.html', {'quotes': Quote.objects.all(), 'latest_project':
+        Project.objects.latest('id'), 'topthree': Project.objects.order_by('-complexity')[:3]})
+
 
 def contact(request):
 	return render(request, 'contact.html')
 
+
 def aboutus(request):
 	return render_to_response('index.html')
+
 
 def news(request):
 	return render_to_response('index.html')
 
+
 def services(request):
-	return render_to_response('services.html', {'services': Service.objects.all()})
+	return render_to_response('services.html')
+
 
 def gallery(request):
 	return render_to_response('index.html')
 
+
 def references(request):
-	return render_to_response('index.html')
+	return render_to_response('reference.html', {'references': Reference.objects.all()})
+
 
 def static_page(request, page_alias):    # page_alias holds the part of the url
     try:

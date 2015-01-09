@@ -10,13 +10,18 @@
                 <div>
                     <h3>Pregled usluga</h3>
                     <div class="row">
-                        {% for service in services %}
+                        {% for reference in references %}
                         <article class="col-lg-4 col-md-4 col-sm-4">
                             <div class="thumb-pad3">
                                 <div class="thumbnail">
-                                    <figure><a href="{{service.image}}"><img src="/media/{{ service.file }}" alt="" title="test title za tooltip"></a></figure>
+                                    <figure>
+                                        <a href="{{reference.image}}">
+                                            <img src="/media/{{ reference.file }}" alt=""
+                                                 title="{{reference.description}}">
+                                        </a>
+                                    </figure>
                                     <div class="caption maxheight">
-                                        <p>{{ service.name }}<br>{{ service.decsription }}</p>
+                                        <p>{{ reference.name }}<br>{{ reference.decsription }}</p>
                                         <!--<a href="#" class="btn-default btn1">read more</a>-->
                                     </div>
                                 </div>

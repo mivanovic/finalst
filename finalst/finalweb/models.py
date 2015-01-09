@@ -22,10 +22,11 @@ class Project(models.Model):
 		return smart_unicode(self.name)
 
 
-class Service(models.Model):
+class Reference(models.Model):
 	name = models.CharField(max_length=100, null=False, blank=False)
 	description = models.CharField(max_length=1000, null=True, blank=True)
 	image = models.CharField(max_length=30, null=False, blank=False)
+	file = models.ImageField(upload_to = '', null=False, blank=False)
 
 	def __unicode__(self):
 		return smart_unicode(self.name)
