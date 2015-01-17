@@ -37,7 +37,7 @@ def gallery(request):
 
 
 def references(request):
-	return render_to_response('reference.html', {'references': Reference.objects.all()})
+	return render_to_response('reference.html', {'references': Reference.objects.order_by('-complexity')})
 
 
 def static_page(request, page_alias):    # page_alias holds the part of the url

@@ -36,13 +36,15 @@ class Migration(migrations.Migration):
             bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='Service',
+            name='Reference',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
                 ('description', models.CharField(max_length=1000, null=True, blank=True)),
-                ('image', models.CharField(max_length=30)),
-                ('file', models.ImageField(upload_to=b'/static/')),
+                ('location', models.CharField(max_length=100, null=True, blank=True)),
+                ('image', models.CharField(max_length=100, null=True, blank=True)),
+                ('file', models.ImageField(null=True, upload_to=b'', blank=True)),
+                ('complexity', models.PositiveIntegerField(default=0, null=True, blank=True, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(99)])),
             ],
             options={
             },
