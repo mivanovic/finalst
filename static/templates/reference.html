@@ -8,15 +8,15 @@
         <div class="row">
             <article class="col-lg-12 col-md-12 col-sm-12 galleryBox">
                 <div>
-                    <h3>Pregled usluga</h3>
+                    <h3>Reference</h3>
                     <div class="row">
                         {% for reference in references %}
                         <article class="col-lg-4 col-md-4 col-sm-4">
                             <div class="thumb-pad3">
                                 <div class="thumbnail">
                                     <figure>
-                                        <a href="{{reference.image}}">
-                                            <img src="/media/{{ reference.file }}" alt=""
+                                        <a href="">
+                                            <img src="{{ reference.image }}" alt=""
                                                  title="{{reference.description}}">
                                         </a>
                                     </figure>
