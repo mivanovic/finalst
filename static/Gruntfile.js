@@ -32,13 +32,24 @@ module.exports = function(grunt) {
           ext: '.min.css'
         }]
       }
+    },
+
+    uglify: {
+      my_target: {
+        files: {
+          'static/js/output.min.js': ['static/js/jquery.js', 'static/js/jquery-migrate-1.2.1.js', '/static/js/superfish.js',
+                                      '/static/js/jquery.easing.1.3.js', '/static/js/jquery.mobilemenu.js',
+                                      '/static/js/jquery.ui.totop.js', '/static/js/jquery.equalheights.js']
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['imagemin', 'cssmin']);
+  grunt.registerTask('default', ['imagemin', 'cssmin', 'uglify']);
 
 };
