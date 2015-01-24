@@ -48,12 +48,11 @@
 		        <section>
 		            <h3>Reference</h3>
 		            <ul>
-		            	{% for record in topthree %}
+		            	{% for record in top_three %}
 		            		<li>
 		            			<strong class="badge">{{forloop.counter|stringformat:"02d"}}.</strong>
 			                    <div class="extra-wrap">
 			                        <p>{{record.name}}</p>
-			                        <!--<p></p>-->
 			                    </div>
 		            		</li>
 		            	{% endfor %}
