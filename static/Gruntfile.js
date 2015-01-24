@@ -42,7 +42,7 @@ module.exports = function(grunt) {
                                       '/static/js/superfish.js',
                                       '/static/js/jquery.easing.1.3.js',
                                       '/static/js/jquery.mobilemenu.js',
-                                      '/static/js/jquery.ui.totop.js', 
+                                      '/static/js/jquery.ui.totop.js',
                                       '/static/js/jquery.equalheights.js']
         }
       }
