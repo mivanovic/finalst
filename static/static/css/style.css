@@ -1082,15 +1082,42 @@ footer article > div {
 	list-style: none;
 	overflow: hidden;
 	display: inline-block;
+	position: relative;
+	height: 34px;
+	width: 200px;
 }
 .follow_icon li {
 	float: left;
 	margin-right: 11px;
+	position: absolute;
+	top: 0;
+}
+.twitter {
+	left: 0px;
+    width: 34px;
+    background: url('/static/img/sprites.png') 0 -50px;
+}
+.plus{
+	left: 45px;
+    width: 34px;
+    background: url('/static/img/sprites.png') -50px 0;
+}
+.fb {
+	left: 90px;
+    width: 34px;
+    background: url('/static/img/sprites.png') -50px -50px;
+}
+.rss {
+	left: 135px;
+    width: 34px;
+    background: url('/static/img/sprites.png') 0 0;
 }
 .follow_icon li:last-child {
 	margin-right: 0;
 }
 .follow_icon li a {
+	height: 34px;
+	display: block;
 	opacity: 1 !important;
 	-webkit-transition: all 0.35s ease !important;
 	transition: all 0.35s ease !important;
