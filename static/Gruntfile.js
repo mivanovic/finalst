@@ -41,9 +41,8 @@ module.exports = function(grunt) {
                                       'static/js/jquery-migrate-1.2.1.js',
                                       '/static/js/superfish.js',
                                       '/static/js/jquery.easing.1.3.js',
-                                      '/static/js/jquery.mobilemenu.js',
-                                      '/static/js/jquery.ui.totop.js',
-                                      '/static/js/jquery.equalheights.js']
+                                      '/static/js/jquery.ui.totop.js'
+                                      ]
         }
       }
     }
