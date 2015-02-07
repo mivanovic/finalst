@@ -13,11 +13,14 @@ class Quote(models.Model):
 
 class Reference(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
-    description = models.CharField(max_length=1000, null=True, blank=True)
-    location = models.CharField(max_length=100, null=True, blank=True)
     image = models.CharField(max_length=100, null=True, blank=True)
     file = models.ImageField(upload_to='', null=True, blank=True)
     complexity = models.PositiveIntegerField(default=0, null=True, blank=True, validators=[MinValueValidator(0), MaxValueValidator(99)])
+
+    location = models.CharField(max_length=100, null=True, blank=True)
+    description = models.CharField(max_length=1000, null=True, blank=True)
+    time = models.CharField(max_length=1000, null=True, blank=True)
+    customer = models.CharField(max_length=1000, null=True, blank=True)
 
     def __unicode__(self):
         return smart_unicode(self.name)

@@ -12,13 +12,20 @@
                         <article>
                             <div class="thumb-pad3">
                                 <div class="thumbnail">
+                                    <h3>{{ data.name }}</h3>
                                     <figure class="col-lg-4 col-md-4 col-sm-4">
-                                        <h3>{{ data.name }}</h3>
-                                        <img src="{{ data.image }}" alt="" title="test title za tooltip">
+                                        <img src="{{ data.image }}" alt="">
                                     </figure>
-                                    <div class="caption maxheight">
-                                        <!--<a href="#" class="btn-default btn1">read more</a>-->
-                                    </div>
+                                    <figure class="col-lg-8 col-md-8 col-sm-8">
+                                        <h4>Lokacija</h4>
+                                        <p>{{data.location}}</p>
+                                        <h4>Naručitelj</h4>
+                                        <p>{{data.customer}}</p>
+                                        <h4>Vrijeme izvodjenja</h4>
+                                        <p>{{data.time}}</p>
+                                        <h4>Opis radova</h4>
+                                        <p>{{data.description}}</p>
+                                    </figure>
                                 </div>
                             </div>
                         </article>

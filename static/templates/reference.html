@@ -10,7 +10,7 @@
                 <div>
                     <h3>Reference</h3>
                     <div class="row">
-                        {% for reference in references %}
+                        {% for reference in references_list %}
                         <article class="col-lg-4 col-md-4 col-sm-4">
                             <div class="thumb-pad3">
                                 <div class="thumbnail">
@@ -21,7 +21,7 @@
                                         </a>
                                     </figure>
                                     <div class="caption maxheight">
-                                        <p>{{ reference.name }}<br>{{ reference.decsription }}</p>
+                                        <p>{{ reference.name }}</p>
                                         <!--<a href="#" class="btn-default btn1">read more</a>-->
                                     </div>
                                 </div>
