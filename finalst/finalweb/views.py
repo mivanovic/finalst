@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response, RequestContext
-from finalweb.models import Quote, Reference
+from finalweb.models import Quote, Reference, RefImages
 from django.views.generic.base import TemplateView, View
 from django.http import HttpResponseRedirect
 from django.core.mail import send_mail, BadHeaderError
@@ -42,6 +42,7 @@ class SingleReferenceView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(SingleReferenceView, self).get_context_data(**kwargs)
         context['data'] = Reference.objects.get(pk=self.kwargs.get('id', None))
+        context['images'] = RefImages.objects.filter(reference__pk=self.kwargs.get('id', None))
         return context
 
 

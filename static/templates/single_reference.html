@@ -11,12 +11,17 @@
                     <div class="row">
                         <article>
                             <div class="thumb-pad3">
-                                <div class="thumbnail">
-                                    <h3>{{ data.name }}</h3>
-                                    <figure class="col-lg-4 col-md-4 col-sm-4">
-                                        <img src="{{ data.image }}" alt="">
+                                <!--<div class="thumbnail">-->
+                                    <!--<h3>{{ data.name }}</h3>-->
+                                    <figure class="col-lg-6 col-md-6 col-sm-6 fotorama">
+                                    <!--<figure class="col-lg-6 col-md-6 col-sm-6">-->
+                                        {% for a in images %}
+                                        <img src="/static/img/3.1.png" alt="">
+                                        {% endfor %}
+
                                     </figure>
-                                    <figure class="col-lg-8 col-md-8 col-sm-8">
+                                    <figure class="col-lg-6 col-md-6 col-sm-6">
+                                        <h3>{{ data.name }}</h3>
                                         <h4>Lokacija</h4>
                                         <p>{{data.location}}</p>
                                         <h4>Naručitelj</h4>
@@ -26,7 +31,7 @@
                                         <h4>Opis radova</h4>
                                         <p>{{data.description}}</p>
                                     </figure>
-                                </div>
+                                <!--</div>-->
                             </div>
                         </article>
                     </div>

@@ -97,9 +97,9 @@ TEMPLATE_DIRS = (
     )
 
 if DEBUG:
-    MEDIA_URL = '/media/'
+    MEDIA_URL = '/finalst/'
     # STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_only')
-    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media')
+    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static/img')
     STATICFILES_DIRS = (
         os.path.join(os.path.dirname(BASE_DIR), 'static', 'static'),
     )
